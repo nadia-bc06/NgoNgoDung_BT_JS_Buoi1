@@ -1,16 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
+
 <body>
     <h1>Bai tap ve nha</h1>
+
+    <!-- bai tap 1: tinh luong nhan vien -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+
+                    <div class="card-header text-center bg-primary text-light">
+                        <h3>Bai tap 1 </h3>
+                        <h4>Tinh tien luong nhan vien</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+
+                            <div class="form-group">
+                                <label for="">Nhap so ngay lam</label>
+                                <input type="number" class="form-control" name="" id="soNgayLam"
+                                    aria-describedby="helpId" placeholder="">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="">Nhap luong ngay</label>
+                                <input type="number" class="form-control" name="" id="luongNgay"
+                                    aria-describedby="helpId" placeholder="">
+
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="tinhLuong()">Tinh luong</button>
+                        </form>
+                    </div>
+                    <div class="card-footer" style="display:none" id="txtThongBao">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end baitap 1 -->
+
+    <hr>
+    <!-- bai tap 2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+
+
+                <div class="card">
+
+                    <div class="card-header text-center bg-primary text-light">
+                        <h3>Bai tap 2 </h3>
+                        <h4>Tinh so trung binh</h4>
+                    </div>
+
+
+                    <div class="card-body  ">
+                        <form action="" class="">
+                            <div class="form-group">
+                                <label for="">nhap so thu 1</label>
+                                <input type="number" id="soThuNhat" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">nhap so thu 2</label>
+                                <input type="number" id="soThuHai" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">nhap so thu 3</label>
+                                <input type="number" id="soThuBa" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">nhap so thu 4</label>
+                                <input type="number" id="soThuTu" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">nhap so thu 5</label>
+                                <input type="number" id="soThuNam" class="form-control">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="tinhTrungBinh()">Tinh trung
+                                binh</button>
+                        </form>
+
+                    </div>
+
+                    <div class="card-footer" id="thongBaoTrungBinh" style="display: none;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- bai tap 3: quy doi tien -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-light">
+                        <h3>Bai tap 3 </h3>
+                        <h4>Quy doi tien</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+
+                            <div class="form-group">
+                                <label for="">Nhap so tien USD </label>
+                                <input type="number" class="form-control" name="" id="soTienUSD">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="">Ty gia: 23,000</label>
+
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="quyDoi()">Quy doi tien</button>
+                        </form>
+                    </div>
+                    <div class="card-footer alert-primary" style="display:none" id="thongBaoTienVND">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end baitap 3 -->
+
+    <hr>
+
+    <!-- bai tap 4 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+
+                    <div class="card-header bg-primary text-light">
+                        <h3>Bai tap 4 </h3>
+                        <h4>Tinh dien tich, chu vi hinh chu nhat</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <form action="">
+                            <div class="form-group">
+                                <label for=""> Nhap chieu dai </label>
+                                <input type="number" class="form-control" name="" id="chieuDai">
+                            </div>
+
+                            <div class="form-group">
+                                <label for=""> Nhap chieu rong </label>
+                                <input type="number" class="form-control" name="" id="chieuRong">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="tinhChuViDienTich()">Tinh Chu Vi,
+                                Dien Tich</button>
+
+
+                        </form>
+                    </div>
+                    <div class="card-footer " id="thongBaoKetQua" style="display: none;">                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- end bai tap 4 -->
+<hr>
+    <!-- bai tap 5 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-light">
+                        <h3>Bai tap 5 </h3>
+                        <h4>Tinh tong 2 ky so</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+
+                            <div class="form-group">
+                                <label for="">Nhap so co hai chu so </label>
+                                <input type="number" class="form-control" name="" id="soHaiChuSo">
+
+                            </div>
+                           
+
+                            <button type="button" class="btn btn-primary" onclick="tinhTong()">Tinh tong 2 ky so</button>
+                        </form>
+                    </div>
+                    <div class="card-footer alert-primary" style="display:none" id="thongBaoTong">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- end bai tap 5 -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
     <script src="./baitap1.js"></script>
     <script src="./baitap2.js"></script>
     <script src="./baitap3.js"></script>
     <script src="./baitap4.js"></script>
     <script src="./baitap5.js"></script>
 </body>
+
 </html>

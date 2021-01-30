@@ -19,15 +19,17 @@
  * 
  * 
  */
+function tinhTong(){
+    
+    var number = document.getElementById("soHaiChuSo").value;
+
+    var hangChuc = Math.floor(number/10);
+    var hangDonVi = (number%10);
+    var tong = hangChuc + hangDonVi;
+
+    document.getElementById("thongBaoTong").innerHTML = "Tong 2 ky so la: " + tong;
+    document.getElementById("thongBaoTong").style.display="block";
+   
+}
 
 
- var number=68;
- var hangChuc=0;
- var hangDonVi=0;
- var tong=0;
-
- hangChuc= Math.floor(number/10);
- hangDonVi= number%10;
- tong=hangChuc+hangDonVi;
-
-console.log("tong 2 ky so la "+tong);

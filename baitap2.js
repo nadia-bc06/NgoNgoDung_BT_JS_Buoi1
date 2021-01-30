@@ -13,14 +13,19 @@
  * xuat thong bao so trung binh
  * 
  */
+function tinhTrungBinh(){
+   
 
- var soThuc1=5;
- var soThuc2=67;
- var soThuc3=342;
- var soThuc4=32;
- var soThuc5=6534;
- var trungBinh=0;
+    var soThu_1 = document.getElementById("soThuNhat").value;
+    var soThu_2 = document.getElementById("soThuHai").value;
+    var soThu_3 = document.getElementById("soThuBa").value;
+    var soThu_4 = document.getElementById("soThuTu").value;
+    var soThu_5 = document.getElementById("soThuNam").value;
+    
+    var trungBinh = (parseInt(soThu_1) + parseInt(soThu_2)+ parseInt(soThu_3) +parseInt(soThu_4) + parseInt(soThu_5))/5;
 
- trungBinh=(soThuc1+soThuc2+soThuc3+soThuc4+soThuc5)/5;
+    document.getElementById("thongBaoTrungBinh").innerHTML = "Trung binh la " + trungBinh;
+    document.getElementById("thongBaoTrungBinh").style.display="block";
+    document.getElementById("thongBaoTrungBinh").classList.add("alert-primary");
 
- console.log("so trung binh la "+trungBinh);
+}

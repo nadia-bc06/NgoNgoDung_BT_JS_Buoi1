@@ -17,14 +17,26 @@
  * 
  */
 
- var chieuDai=8;
- var chieuRong=5;
- var chuVi=0;
- var dienTich=0;
+function tinhChuViDienTich(){
 
- chuVi=(chieuDai + chieuRong)*2;
- dienTich=chieuDai*chieuRong;
+    var chieuDai = document.getElementById("chieuDai").value;
+    var chieuRong = document.getElementById("chieuRong").value;
+    console.log(chieuDai,chieuRong);
+    var chuVi=   (parseInt(chieuDai) + parseInt(chieuRong))*2;
+    var dienTich= chieuDai*chieuRong;
 
- console.log("chu vi la "+chuVi);
- console.log("dien tich la "+dienTich);
+    var footerChuViDienTich = "<div> Chu Vi la: " + chuVi + "</div>";
+    footerChuViDienTich += "<div> Dien Tich la: "+ dienTich + "</div>" ;
+
+    // document.getElementById("thongBaoChuVi").innerHTML = "<div> Chu vi la: " + chuVi + "</div>";
+    // document.getElementById("thongBaoDienTich").innerHTML = "<div> Dien tich la: " + dienTich + "</div>";
+   
+    document.getElementById("thongBaoKetQua").innerHTML = footerChuViDienTich;
+    document.getElementById("thongBaoKetQua").style.display="block";
+    document.getElementById("thongBaoKetQua").classList.add("alert-danger");
+
+
+}
  
+
+

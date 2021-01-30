@@ -1,26 +1,31 @@
 /**
  * Mo hinh 3 khoi
- * *Dau vao (input)
+ *
+ *  *Dau vao (input)
  * luongNgay=100000;
  * soNgayLam=22;
- * soNhanVien=50;
- * *xu ly
- * luongMotNhanVien=luongNgay*soNgayLam;
- *  luongTongNhanVien=luongMotNhanVien*soNhanVien;
+ *
+ *  *xu ly
+ * luongNhanVien=luongNgay*soNgayLam;
+ * 
  * ket qua(output)
  * thong bao luong
  * 
  */
 
- var luongNgay=100000;
- var soNgayLam=22;
- var soNhanVien=50;
- var luongMotNhanVien=0;
- var luongTongNhanVien=0;
+ function tinhLuong(){
+   
+    var soNgayLam = document.getElementById("soNgayLam").value;
+    var luongNgay = document.getElementById("luongNgay").value;
 
- luongMotNhanVien=luongNgay*soNgayLam;
- luongTongNhanVien=luongMotNhanVien*soNhanVien;
+     var luongNhanVien = soNgayLam*luongNgay;
 
  var currentFormat = new Intl.NumberFormat("vn-VN");
- var tienFormat = currentFormat.format(luongTongNhanVien);
- console.log("luong tat ca nhan vien la " + tienFormat + "VND");
+ var tienFormat = currentFormat.format(luongNhanVien);
+ var thongBaoLuong = "luong nhan vien la " + tienFormat + "VND";
+
+ document.getElementById("txtThongBao").innerHTML = thongBaoLuong;
+ document.getElementById("txtThongBao").style.display = "block";
+ document.getElementById("txtThongBao").classList.add("alert-primary");
+}
+

@@ -15,12 +15,26 @@
  * 
  */
 
- var tyGiaUSD=23500;
- var soTienUSD=1000;
- var soTienVND=0;
 
- soTienVND = soTienUSD*tyGiaUSD;
+function quyDoi(){
 
- var currentFormat = new Intl.NumberFormat("vn-VN");
- var tienFormat = currentFormat.format(soTienVND);
- console.log("So tien quy doi sang VND la " + tienFormat +"VND");
+    var soTien_USD = document.getElementById("soTienUSD").value;
+
+    var tyGia_USD = 23000;
+
+    var soTien_VND = parseInt(soTien_USD) * parseInt(tyGia_USD);
+
+    var currentFormat = new Intl.NumberFormat("vn-VN");
+    var tien_Format = currentFormat.format(soTien_VND);
+
+    document.getElementById("thongBaoTienVND").innerHTML = "So tien quy doi sang tien Viet la " + tien_Format +"VND" ;
+    document.getElementById("thongBaoTienVND").style.display="block"
+
+
+
+
+}
+
+
+
+
